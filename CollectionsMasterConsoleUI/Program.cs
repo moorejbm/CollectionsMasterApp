@@ -70,10 +70,10 @@ namespace CollectionsMasterConsoleUI
             Console.WriteLine($"{numList.Count}");
 
             //Populate the List with 50 random numbers between 0 and 50 you will need a method for this            
-            
+            Populater(numbers);
 
             //Print the new capacity
-            
+            Console.WriteLine(numList.Capacity);
 
             Console.WriteLine("---------------------");
 
@@ -132,10 +132,13 @@ namespace CollectionsMasterConsoleUI
 
         private static void Populater(List<int> numbers)
         {
-            
-                              
+                                     
             Random rng = new Random();
 
+            for (int i = 0; i < 50; i++) 
+            {
+                numbers.Add(rng.Next(50));
+            }
            }
 
         private static void Populater(int[] numbers)
